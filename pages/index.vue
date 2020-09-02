@@ -35,9 +35,9 @@
         </div>
       </div>
     </div>
-   <div>
-     <button class="button is-small is-fullwidth">Small</button>
-   </div>
+    <div>
+      <button class="button is-small is-fullwidth">Small</button>
+    </div>
   </section>
 </template>
 
