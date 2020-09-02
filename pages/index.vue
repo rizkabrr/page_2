@@ -2,14 +2,16 @@
   <section class="section">
     <div class="columns is-multiline is-mobile is-variable">
       <div class="column is-one-third" v-for="(item, i) in items" :key="i">
-        <div class="card">
-          <div class="columns">
-            <div class="column">
+        <!-- <div class="card"> -->
+        <div class="columns">
+          <div class="column">
+            <div class="image IMG-F">
               <figure class="image-figure">
                 <img :src="item.image" />
               </figure>
             </div>
-            <div class="column">
+          </div>
+          <!-- <div class="column">
               <p>Voucher Belanja</p>
               <p class="control" v-if="items.rating">
                 <b-rate :value="items.rating" show-score="disabled" />
@@ -30,13 +32,13 @@
                 :spaced="isSpaced"
                 :disabled="isDisabled"
               ></b-rate>
-            </div>
-          </div>
+            </div> -->
         </div>
+        <!-- </div> -->
       </div>
     </div>
-    <div>
-      <button class="button is-small is-fullwidth">Small</button>
+    <div class="see-more">
+      <button class="button is-fullwidth"><strong>Small</strong></button>
     </div>
   </section>
 </template>
@@ -58,145 +60,52 @@ export default {
         {
           title: 'Slide 1',
           image:
-            'https://cdna.artstation.com/p/assets/images/images/010/098/130/large/sajal-kr-chand-flat-landscape.jpg?1522574693',
+            'https://upload.wikimedia.org/wikipedia/commons/f/f5/Poster-sized_portrait_of_Barack_Obama.jpg',
           rating: 4.4,
         },
         {
           title: 'Slide 2',
           image:
-            'https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/7db5c985847371.5d8898692240d.jpg',
+            'https://images.unsplash.com/photo-1546538994-4f15d0aa966f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80',
           rating: 3.5,
         },
         {
           title: 'Slide 3',
-          image:
-            'https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/49e7f485847371.5d8898692146c.jpg',
+          image: 'https://jooinn.com/images/portrait-1.jpg',
           rating: 5,
         },
         {
           title: 'Slide 1',
           image:
-            'https://cdna.artstation.com/p/assets/images/images/010/098/130/large/sajal-kr-chand-flat-landscape.jpg?1522574693',
+            'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQCRyi4-dicSyWEFp0un3Taue0spzl0b6fNQA&usqp=CAU',
           rating: 4.4,
         },
         {
           title: 'Slide 2',
-          image:
-            'https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/7db5c985847371.5d8898692240d.jpg',
+          image: 'https://i.redd.it/7mkdr70e1dl31.jpg',
           rating: 3.5,
         },
         {
           title: 'Slide 3',
           image:
-            'https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/49e7f485847371.5d8898692146c.jpg',
+            'https://www.zarias.com/wp-content/uploads/2015/08/Portrait-Photography-Tips-and-Ideas-261.jpg',
           rating: 5,
         },
         {
           title: 'Slide 1',
           image:
-            'https://cdna.artstation.com/p/assets/images/images/010/098/130/large/sajal-kr-chand-flat-landscape.jpg?1522574693',
+            'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQCRyi4-dicSyWEFp0un3Taue0spzl0b6fNQA&usqp=CAU',
           rating: 4.4,
         },
         {
           title: 'Slide 2',
-          image:
-            'https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/7db5c985847371.5d8898692240d.jpg',
+          image: 'https://i.redd.it/7mkdr70e1dl31.jpg',
           rating: 3.5,
         },
         {
           title: 'Slide 3',
           image:
-            'https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/49e7f485847371.5d8898692146c.jpg',
-          rating: 5,
-        },
-        {
-          title: 'Slide 1',
-          image:
-            'https://cdna.artstation.com/p/assets/images/images/010/098/130/large/sajal-kr-chand-flat-landscape.jpg?1522574693',
-          rating: 4.4,
-        },
-        {
-          title: 'Slide 2',
-          image:
-            'https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/7db5c985847371.5d8898692240d.jpg',
-          rating: 3.5,
-        },
-        {
-          title: 'Slide 3',
-          image:
-            'https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/49e7f485847371.5d8898692146c.jpg',
-          rating: 5,
-        },
-        {
-          title: 'Slide 1',
-          image:
-            'https://cdna.artstation.com/p/assets/images/images/010/098/130/large/sajal-kr-chand-flat-landscape.jpg?1522574693',
-          rating: 4.4,
-        },
-        {
-          title: 'Slide 2',
-          image:
-            'https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/7db5c985847371.5d8898692240d.jpg',
-          rating: 3.5,
-        },
-        {
-          title: 'Slide 3',
-          image:
-            'https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/49e7f485847371.5d8898692146c.jpg',
-          rating: 5,
-        },
-        {
-          title: 'Slide 1',
-          image:
-            'https://cdna.artstation.com/p/assets/images/images/010/098/130/large/sajal-kr-chand-flat-landscape.jpg?1522574693',
-          rating: 4.4,
-        },
-        {
-          title: 'Slide 2',
-          image:
-            'https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/7db5c985847371.5d8898692240d.jpg',
-          rating: 3.5,
-        },
-        {
-          title: 'Slide 3',
-          image:
-            'https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/49e7f485847371.5d8898692146c.jpg',
-          rating: 5,
-        },
-        {
-          title: 'Slide 1',
-          image:
-            'https://cdna.artstation.com/p/assets/images/images/010/098/130/large/sajal-kr-chand-flat-landscape.jpg?1522574693',
-          rating: 4.4,
-        },
-        {
-          title: 'Slide 2',
-          image:
-            'https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/7db5c985847371.5d8898692240d.jpg',
-          rating: 3.5,
-        },
-        {
-          title: 'Slide 3',
-          image:
-            'https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/49e7f485847371.5d8898692146c.jpg',
-          rating: 5,
-        },
-        {
-          title: 'Slide 1',
-          image:
-            'https://cdna.artstation.com/p/assets/images/images/010/098/130/large/sajal-kr-chand-flat-landscape.jpg?1522574693',
-          rating: 4.4,
-        },
-        {
-          title: 'Slide 2',
-          image:
-            'https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/7db5c985847371.5d8898692240d.jpg',
-          rating: 3.5,
-        },
-        {
-          title: 'Slide 3',
-          image:
-            'https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/49e7f485847371.5d8898692146c.jpg',
+            'https://www.zarias.com/wp-content/uploads/2015/08/Portrait-Photography-Tips-and-Ideas-261.jpg',
           rating: 5,
         },
       ],
@@ -204,3 +113,16 @@ export default {
   },
 }
 </script>
+<style>
+.IMG-F {
+  display: block;
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  width: auto;
+  height: 15rem;
+}
+.see-more button {
+  border-color:#f6924b;
+}
+</style>

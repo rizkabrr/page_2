@@ -2,7 +2,7 @@
   <!-- <section class="container"> -->
     <div>
       <nav
-        class="navbar header has-shadow is-primary"
+        class="navbar header has-shadow is-fluid"
         role="navigation"
         aria-label="main navigation"
       >
@@ -47,6 +47,7 @@
           </div>
         </div>
       </nav>
+      <div class="container">
       <div>
         <nav class="breadcrumb has-arrow-separator" aria-label="breadcrumbs">
           <ul>
@@ -67,7 +68,7 @@
       </div>
 
       <section class="main-content columns">
-        <aside class="column is-2 section">
+        <aside class="column is-2 section px-4">
           <p class="menu-label is-hidden-touch">General</p>
           <ul class="menu-list">
             <li v-for="(item, key) of items" :key="key">
@@ -141,6 +142,7 @@
           <nuxt />
         </div>
       </section>
+      </div>
       <div>
         <footer class="footer">
           <div class="content">
@@ -148,48 +150,40 @@
               <div class="column">
                 <h1>Halo Properti</h1>
                 <div class="columns">
-                  <div class="column">
-                    <a href="#">
+                    <a class="icon-f" href="#">
                       <img src="https://img.icons8.com/material-rounded/24/000000/facebook-new.png"/>
                     </a>
-                  </div>
-                  <div class="column">
-                    <a href="#">
+                    <a class="icon-f" href="#">
                       <img src="https://img.icons8.com/material-rounded/24/000000/youtube.png"/>
                     </a>
-                  </div>
-                  <div class="column">
-                    <a href="#">
+                    <a class="icon-f" href="#">
                       <img src="https://img.icons8.com/material-rounded/24/000000/pinterest.png"/>
                     </a>
-                  </div>
-                  <div class="column">
-                    <a href="#">
+                    <a class="icon-f" href="#">
                       <img src="https://img.icons8.com/material-rounded/24/000000/instagram-new.png"/>
                     </a>
-                  </div>
                 </div>
               </div>
               <div class="column">
                 <div class="columns">
-                  <h2></h2>
+                  <br/>
                 </div>
-                <div class="columns">
+                <div>
                   <a href="#">
                     <h3>Tentang Kami</h3>
                   </a>
                 </div>
-                <div class="columns">
+                <div>
                   <a href="#">
                     <h3>Layanan Kami</h3>
                   </a>
                 </div>
-                <div class="columns">
+                <div>
                   <a href="#">
                     <h3>Kebijakan Kami</h3>
                   </a>
                 </div>
-                <div class="columns">
+                <div>
                   <a href="#">
                     <h3>Kebijakan Peivasi</h3>
                   </a>
@@ -197,24 +191,24 @@
               </div>
               <div class="column">
                 <div class="columns">
-                  <h2></h2>
+                  <br/>
                 </div>
-                <div class="columns">
+                <div >
                   <a href="#">
                     <h3>Patner Kami</h3>
                   </a>
                 </div>
-                <div class="columns">
+                <div>
                   <a href="#">
                     <h3>Kontak Kami</h3>
                   </a>
                 </div>
-                <div class="columns">
+                <div>
                   <a href="#">
                     <h3>Pusat Bantuan</h3>
                   </a>
                 </div>
-                <div class="columns">
+                <div>
                   <a href="#">
                     <h3>Kebijakan Privasi</h3>
                   </a>
@@ -222,21 +216,23 @@
               </div>
               <div class="column">
                 <div class="columns">
-                  <h2></h2>
+                  <br/>
                 </div>
+                <div class="column">
                 <div class="columns">
                   <h3>Unduh Aplikasi</h3>
                 </div>
                 <div class="columns">
-                  <div class="column">
+                  <a class="a1" href="#">
                     <img src="~assets/icon_gp.png" alt="play_store" />
-                  </div>
-                  <div class="column">
+                  </a>
+                  <a class="a1" href="#">
                     <img src="~assets/icon_as.png" alt="app_store" />
-                  </div>
+                  </a>
                 </div>
-                <div class="columns">
+                <div>
                   <h3>Ikuti Kami</h3>
+                </div>
                 </div>
               </div>
             </div>
@@ -294,5 +290,21 @@ export default {
 .menu-list a:hover {
   background-color: #f7965126;
   color: #363636;
+}
+.section {
+    padding: 1rem 1rem;
+}
+article, aside, figure, footer, header, hgroup, section {
+    display: grid;
+}
+body{
+  font-size: small;
+}
+.icon-f{
+  padding: 10px;
+}
+.a1{
+  width: 240px;
+  height: auto; 
 }
 </style>
