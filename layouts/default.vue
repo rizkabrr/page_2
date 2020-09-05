@@ -1,53 +1,53 @@
 <template>
   <!-- <section class="container"> -->
-    <div>
-      <nav
-        class="navbar header has-shadow is-fluid"
-        role="navigation"
-        aria-label="main navigation"
-      >
-        <div class="navbar-brand">
-          <a class="navbar-item" href="#">
-            <img src="~/assets/2.png" width="150" />
-          </a>
+  <div>
+    <nav
+      class="navbar header has-shadow px-2 py-4"
+      role="navigation"
+      aria-label="main navigation"
+    >
+      <div class="navbar-brand">
+        <a class="navbar-item" href="#">
+          <img src="~/assets/2.png" width="150" />
+        </a>
 
-          <a
-            role="button"
-            class="navbar-burger burger"
-            aria-label="menu"
-            aria-expanded="false"
-            data-target="navbarBasicExample"
-          >
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-          </a>
-        </div>
+        <a
+          role="button"
+          class="navbar-burger burger"
+          aria-label="menu"
+          aria-expanded="false"
+          data-target="navbarBasicExample"
+        >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
 
-        <div class="navbar-start">
-          <b-field class="py-2 pl-4">
-            <b-input
-              placeholder="Pencarian..."
-              type="search"
-              icon-right="magnify"
-              icon-right-clickable="search"
-            />
-          </b-field>
-        </div>
-        <div class="navbar-end">
-          <div class="navbar-item">
-            <div class="buttons">
-              <a class="button is-light">
-                <strong>Gabung Mitra</strong>
-              </a>
-              <a class="button is-halo">
-                <strong>Masuk</strong>
-              </a>
-            </div>
+      <div class="navbar-start">
+        <b-field class="py-2 pl-4">
+          <b-input
+            placeholder="Pencarian..."
+            type="search"
+            icon-right="magnify"
+            icon-right-clickable="search"
+          />
+        </b-field>
+      </div>
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+            <a class="button is-light">
+              <strong>Gabung Mitra</strong>
+            </a>
+            <a class="button is-halo">
+              <strong>Masuk</strong>
+            </a>
           </div>
         </div>
-      </nav>
-      <div class="container">
+      </div>
+    </nav>
+    <div class="container is-fluid py-4">
       <div>
         <nav class="breadcrumb has-arrow-separator" aria-label="breadcrumbs">
           <ul>
@@ -67,9 +67,9 @@
         </nav>
       </div>
 
-      <section class="main-content columns">
-        <aside class="column is-2 section px-4">
-          <p class="menu-label is-hidden-touch">General</p>
+      <section class="main-content columns px-4 py-4">
+        <aside class="column is-2 section ">
+          <!-- <p class="menu-label is-hidden-touch">General</p> -->
           <ul class="menu-list">
             <li v-for="(item, key) of items" :key="key">
               <nuxt-link :to="item.to" exact-active-class="is-active">
@@ -78,8 +78,7 @@
               </nuxt-link>
             </li>
           </ul>
-
-          <div>
+          <div class="content px-2 py-2">
             <b>Kategori</b>
             <p>----------------</p>
             <div class="field">
@@ -98,12 +97,17 @@
               <b-checkbox>Others</b-checkbox>
             </div>
           </div>
-
-          <b-field label="Biaya">
-            <b-slider :value="20"></b-slider>
+          <div class="content px-2 py-2">
+          <p><strong>BIAYA</strong></p>
+          <b-field grouped>
+            <b-input v-model="value" type="number"></b-input>
           </b-field>
+          <b-field>
+            <b-slider :min="20000" :max="2000000" aria-setsize="small" v-model="value" lazy ></b-slider>
+          </b-field>
+          </div>
 
-          <div>
+          <div class="content px-2 py-2">
             <b>Level Mitra</b>
             <p>----------------</p>
             <div class="field">
@@ -120,7 +124,7 @@
             </div>
           </div>
 
-          <div>
+          <div class="content px-2 py-2">
             <b>Tampilan Projek</b>
             <p>----------------</p>
             <div class="field">
@@ -137,88 +141,96 @@
             </div>
           </div>
         </aside>
-
-        <div class="container column is-10">
+        <div >
+          <!-- class="content px-2 py-2" -->
           <nuxt />
         </div>
       </section>
-      </div>
-      <div>
-        <footer class="footer">
-          <div class="content">
-            <div class="columns">
-              <div class="column">
-                <h1>Halo Properti</h1>
-                <div class="columns">
-                    <a class="icon-f" href="#">
-                      <img src="https://img.icons8.com/material-rounded/24/000000/facebook-new.png"/>
-                    </a>
-                    <a class="icon-f" href="#">
-                      <img src="https://img.icons8.com/material-rounded/24/000000/youtube.png"/>
-                    </a>
-                    <a class="icon-f" href="#">
-                      <img src="https://img.icons8.com/material-rounded/24/000000/pinterest.png"/>
-                    </a>
-                    <a class="icon-f" href="#">
-                      <img src="https://img.icons8.com/material-rounded/24/000000/instagram-new.png"/>
-                    </a>
-                </div>
+    </div>
+    <div>
+      <footer class="footer">
+        <div class="content">
+          <div class="columns">
+            <div class="column">
+              <h1>Halo Properti</h1>
+              <div class="columns">
+                <a class="icon-f" href="#">
+                  <img
+                    src="https://img.icons8.com/material-rounded/24/000000/facebook-new.png"
+                  />
+                </a>
+                <a class="icon-f" href="#">
+                  <img
+                    src="https://img.icons8.com/material-rounded/24/000000/youtube.png"
+                  />
+                </a>
+                <a class="icon-f" href="#">
+                  <img
+                    src="https://img.icons8.com/material-rounded/24/000000/pinterest.png"
+                  />
+                </a>
+                <a class="icon-f" href="#">
+                  <img
+                    src="https://img.icons8.com/material-rounded/24/000000/instagram-new.png"
+                  />
+                </a>
+              </div>
+            </div>
+            <div class="column has-text-small">
+              <div class="columns">
+                <br />
+              </div>
+              <div>
+                <a href="#">
+                  <h3>Tentang Kami</h3>
+                </a>
+              </div>
+              <div>
+                <a href="#">
+                  <h3>Layanan Kami</h3>
+                </a>
+              </div>
+              <div>
+                <a href="#">
+                  <h3>Kebijakan Kami</h3>
+                </a>
+              </div>
+              <div>
+                <a href="#">
+                  <h3>Kebijakan Peivasi</h3>
+                </a>
+              </div>
+            </div>
+            <div class="column">
+              <div class="columns">
+                <br />
+              </div>
+              <div>
+                <a href="#">
+                  <h3>Patner Kami</h3>
+                </a>
+              </div>
+              <div>
+                <a href="#">
+                  <h3>Kontak Kami</h3>
+                </a>
+              </div>
+              <div>
+                <a href="#">
+                  <h3>Pusat Bantuan</h3>
+                </a>
+              </div>
+              <div>
+                <a href="#">
+                  <h3>Kebijakan Privasi</h3>
+                </a>
+              </div>
+            </div>
+            <div class="column">
+              <div class="columns">
+                <br />
               </div>
               <div class="column">
-                <div class="columns">
-                  <br/>
-                </div>
-                <div>
-                  <a href="#">
-                    <h3>Tentang Kami</h3>
-                  </a>
-                </div>
-                <div>
-                  <a href="#">
-                    <h3>Layanan Kami</h3>
-                  </a>
-                </div>
-                <div>
-                  <a href="#">
-                    <h3>Kebijakan Kami</h3>
-                  </a>
-                </div>
-                <div>
-                  <a href="#">
-                    <h3>Kebijakan Peivasi</h3>
-                  </a>
-                </div>
-              </div>
-              <div class="column">
-                <div class="columns">
-                  <br/>
-                </div>
-                <div >
-                  <a href="#">
-                    <h3>Patner Kami</h3>
-                  </a>
-                </div>
-                <div>
-                  <a href="#">
-                    <h3>Kontak Kami</h3>
-                  </a>
-                </div>
-                <div>
-                  <a href="#">
-                    <h3>Pusat Bantuan</h3>
-                  </a>
-                </div>
-                <div>
-                  <a href="#">
-                    <h3>Kebijakan Privasi</h3>
-                  </a>
-                </div>
-              </div>
-              <div class="column">
-                <div class="columns">
-                  <br/>
-                </div>
-                <div class="column">
                 <div class="columns">
                   <h3>Unduh Aplikasi</h3>
                 </div>
@@ -233,13 +245,13 @@
                 <div>
                   <h3>Ikuti Kami</h3>
                 </div>
-                </div>
               </div>
             </div>
           </div>
-        </footer>
-      </div>
+        </div>
+      </footer>
     </div>
+  </div>
   <!-- </section> -->
 </template>
 
@@ -247,17 +259,13 @@
 export default {
   data() {
     return {
+      value:20,
       items: [
         {
           title: 'Home',
           icon: 'home',
           to: { name: 'index' },
-        },
-        {
-          title: 'Inspire',
-          icon: 'lightbulb',
-          to: { name: 'inspire' },
-        },
+        }
       ],
     }
   },
@@ -292,19 +300,26 @@ export default {
   color: #363636;
 }
 .section {
-    padding: 1rem 1rem;
+  padding: 1rem 1rem;
 }
-article, aside, figure, footer, header, hgroup, section {
-    display: grid;
+article,
+aside,
+figure,
+footer,
+header,
+hgroup,
+section {
+  display: grid;
 }
-body{
+body {
   font-size: small;
 }
-.icon-f{
+.icon-f img {
   padding: 10px;
 }
-.a1{
+.a1 img {
   width: 240px;
-  height: auto; 
+  height: auto;
+  padding: 4px;
 }
 </style>
