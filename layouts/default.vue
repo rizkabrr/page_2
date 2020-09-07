@@ -99,7 +99,7 @@
           </div>
           <div class="content px-2 py-2">
           <p><strong>BIAYA</strong></p>
-          <b-field grouped>
+          <b-field>
             <b-input v-model="value" type="number"></b-input>
           </b-field>
           <b-field>

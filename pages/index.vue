@@ -14,8 +14,8 @@
           </div>
           <div class="card-content">
             <div class="content">
-              <div class="container columns mb-0 is-mobile">
-                <div class="column container pr-1">
+              <div class="content columns mb-0 is-mobile">
+                <div class="column">
                   <div class="PHOTO-PROFILE container">
                     <img
                       src="https://raw.githubusercontent.com/AmzyZy24/Item/master/no-icon.png"
@@ -27,7 +27,7 @@
                 </div>
                 <div class="INFO column is-full pl-1">
                   <div class="is-size-5 has-text-weight-semibold px-1">
-                    Jokowi
+                    <p class="title is-6">{{ list.title }}</p>
                   </div>
                   <div
                     class="is-one-fifth is-size-7 has-text-weight-normal px-1"
@@ -36,9 +36,13 @@
                   </div>
                 </div>
               </div>
-              <p class="title is-6">{{ list.title }}</p>
-              <p class="subtitle is-7">@johnsmith</p>
-              <div class="field is-grouped">
+              <div class="content columns mb-0 is-mobile">
+                <div class="column">
+                  <p class="subtitle is-7">Make your dreams come true and standing apart on this imagination</p>
+                </div>
+              </div>
+              <!-- <p class="subtitle is-7">Make your dreams come true and standing apart on this imagination</p> -->
+              <div class="field name-mr is-grouped mb-2 is-mobile">
                 <p class="control" v-if="list.rating">
                   <b-rate
                     :value="list.rating"
@@ -49,11 +53,18 @@
                   >
                   </b-rate>
                 </p>
-                <p class="control" style="margin-left: auto;">
+                <p>(23 reviews)</p>
+              </div>
+              <div class="field is-grouped is-mobile">
+                <p class="control" style="margin-right: auto;">
                   <button class="button is-small is-danger is-outlined">
                     <b-icon size="is-small" icon="heart" />
                   </button>
                 </p>
+                <p class="cotent" style="margin-left: auto;">
+                  Price Start = $23
+                </p>
+                
               </div>
             </div>
           </div>
